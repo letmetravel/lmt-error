@@ -1,4 +1,4 @@
-lmt-error [![Build Status] ![Travis CI][travis-image]][travis-url]
+lmt-error [![Travis CI][travis-image]][travis-url]]
 
 =========
 
