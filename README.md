@@ -1,4 +1,5 @@
-lmt-error [![Build Status](https://api.travis-ci.org/letmetravel/lmt-error.png?branch=master)](https://travis-ci.org/letmetravel/lmt-error)
+lmt-error [![Build Status] ![Travis CI][travis-image]][travis-url]
+
 =========
 
 Библиотека для удобной работы с ошибками в nodejs и в браузере
@@ -30,3 +31,5 @@ var err = new TestErrorWithDefaultMessage({some: 'data'});
 
 ```
 
+[travis-image]: https://img.shields.io/travis/letmetravel/lmt-error.svg?style=flat-square
+[travis-url]: https://travis-ci.org/letmetravel/lmt-error
