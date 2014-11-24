@@ -1,5 +1,4 @@
-# lmt-error [![Travis CI][travis-image]][travis-url]
-
+lmt-error [![Travis CI][travis-image]][travis-url]
 =========
 
 Библиотека для удобной работы с ошибками в nodejs и в браузере
