@@ -4,7 +4,7 @@
   "description": "lmt-error =========",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/letmetravel/lmt-error/issues"
   },
-  "homepage": "https://github.com/letmetravel/lmt-error"
+  "homepage": "https://github.com/letmetravel/lmt-error",
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
 }
