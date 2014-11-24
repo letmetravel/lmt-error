@@ -1,5 +1,6 @@
 var assert = require('assert');
 
+var util = require('./../lib/util');
 var error = require('./../lib/');
 var TestError = error('TestError');
 var TestErrorWithDefaultMessage = error('TestErrorWithDefaultMessage', 'dafault message');
@@ -60,6 +61,36 @@ describe('error instance', function () {
     assert.equal(err.name, 'TestErrorWithDefaultMessage');
     assert.equal(err.message, 'dafault message');
     assert.equal(err.hello, 'universe');
+  });
+
+});
+
+
+describe('util.toError', function () {
+
+  it('should return error instance from object', function () {
+    var err = util.toError({name: 'TestError', message: 'message', hello: 'universe'});
+
+    assert.ok(err instanceof Error);
+    assert.equal(err.name, 'TestError');
+    assert.equal(err.message, 'message');
+    assert.equal(err.hello, 'universe');
+  });
+
+  it('should return null if object not contains name', function () {
+    var err = util.toError({message: 'message', hello: 'universe'});
+    assert.equal(err, null);
+  });
+
+  it('should return null if object not contains message', function () {
+    var err = util.toError({name: 'TestError', hello: 'universe'});
+    assert.equal(err, null);
+  });
+
+  it('should return error instance deepEqual as normally created', function () {
+    var err1 = new TestError('message', { hello: 'universe' });
+    var err2 = util.toError({name: 'TestError', message: 'message', hello: 'universe'});
+    assert.deepEqual(err1, err2);
   });
 
 });
